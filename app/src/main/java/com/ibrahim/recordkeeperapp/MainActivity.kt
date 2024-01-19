@@ -2,12 +2,14 @@ package com.ibrahim.recordkeeperapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.FrameLayout
+import android.widget.Toast
 import androidx.fragment.app.commit
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.ibrahim.recordkeeperapp.databinding.ActivityMainBinding
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,12 +20,10 @@ class MainActivity : AppCompatActivity() {
 //            replace(R.id.frame_content, RunningFragment())
 //        }
 
-        binding.btnCycling.setOnClickListener {
-           onCyclingClicked()
-        }
-        binding.btnRunning.setOnClickListener {
-            onRunningClicked()
-        }
+        binding.btnCycling.setOnClickListener(this)
+        binding.btnRunning.setOnClickListener(this)
+
+
 
 
 
@@ -40,5 +40,14 @@ class MainActivity : AppCompatActivity() {
         supportFragmentManager.commit {
             replace(R.id.frame_content, CyclingFragment())
         }
+    }
+
+    override fun onClick(view: View?) {
+        if (view == null) return
+        when (view.id) {
+            R.id.btn_running -> onRunningClicked()
+            R.id.btn_cycling -> onCyclingClicked()
+        }
+
     }
 }
