@@ -11,7 +11,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationBarView
 import com.ibrahim.recordkeeperapp.databinding.ActivityMainBinding
 
-class MainActivity : AppCompatActivity(), NavigationBarView.OnItemSelectedListener {
+class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,7 +22,24 @@ class MainActivity : AppCompatActivity(), NavigationBarView.OnItemSelectedListen
 //            replace(R.id.frame_content, RunningFragment())
 //        }
 
-        binding.bottomNav.setOnItemSelectedListener(this)
+        binding.bottomNav.setOnItemSelectedListener(
+            object : NavigationBarView.OnItemSelectedListener {
+                override fun onNavigationItemSelected(item: MenuItem): Boolean {
+                    when (item.itemId) {
+                        R.id.nav_running -> {
+                            onRunningClicked()
+                            return true
+                        }
+                        R.id.nav_cycling -> {
+                            onCyclingClicked()
+                            return true
+                        }
+
+                    }
+                    return false
+                }
+            }
+        )
 
 
 
@@ -41,17 +58,6 @@ class MainActivity : AppCompatActivity(), NavigationBarView.OnItemSelectedListen
         }
     }
 
-    override fun onNavigationItemSelected(item: MenuItem): Boolean {
-        if (item.itemId == R.id.nav_running) {
-            onRunningClicked()
-            return true
-        } else if (item.itemId == R.id.nav_cycling) {
-            onCyclingClicked()
-            return true
-        } else {
-            return false
-        }
-    }
 
 
 }
