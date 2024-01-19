@@ -7,6 +7,7 @@ android {
     namespace = "com.ibrahim.recordkeeperapp"
     compileSdk = 34
 
+
     defaultConfig {
         applicationId = "com.ibrahim.recordkeeperapp"
         minSdk = 21
@@ -16,6 +17,11 @@ android {
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
+
+    buildFeatures {
+        viewBinding = true
+    }
+
 
     buildTypes {
         release {
