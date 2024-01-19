@@ -2,4 +2,7 @@
     <string name="app_name">Record Keeper App</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="running">Running</string>
+    <string name="running_image_desc">Running Image</string>
+    <string name="cycling_image_desc">Cycling image</string>
 </resources>
