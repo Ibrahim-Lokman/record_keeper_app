@@ -21,16 +21,19 @@ class MainActivity : AppCompatActivity(){
 //        }
 
         binding.btnCycling.setOnClickListener(
-            View.OnClickListener() {
-
-                onCyclingClicked()
-                Toast.makeText(this, "Cycling Anonymous 2", Toast.LENGTH_SHORT).show()
+            object : View.OnClickListener {
+                override fun onClick(v: View?) {
+                    onCyclingClicked()
+                    Toast.makeText(this@MainActivity, "Cycling Anonymous 1", Toast.LENGTH_SHORT).show()
+                }
             }
         )
         binding.btnRunning.setOnClickListener(
-            View.OnClickListener() {
-                onRunningClicked()
-                Toast.makeText(this, "Running Anonymous 2", Toast.LENGTH_SHORT).show()
+            object : View.OnClickListener {
+                override fun onClick(v: View?) {
+                    onRunningClicked()
+                    Toast.makeText(this@MainActivity, "Running Anonymous 2", Toast.LENGTH_SHORT).show()
+                }
             }
         )
 
