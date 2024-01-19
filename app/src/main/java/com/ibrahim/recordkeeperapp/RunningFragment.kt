@@ -27,15 +27,16 @@ class RunningFragment : Fragment(){
 
     private fun setupClickListeners() {
         binding.container5km.setOnClickListener {
-          lanunchRunningRecordActivity()
+          lanunchRunningRecordActivity("5")
         }
     }
 
-    private fun lanunchRunningRecordActivity() {
+    private fun lanunchRunningRecordActivity(value : String) {
 
         val intent = Intent(context, EditRunningRecordActivity::class.java)
+        intent.putExtra("recordType", "$value km")
         startActivity(intent)
-    }
+   }
 
 
 
