@@ -20,25 +20,14 @@ class MainActivity : AppCompatActivity(){
 //            replace(R.id.frame_content, RunningFragment())
 //        }
 
-        binding.btnCycling.setOnClickListener(
-            object : View.OnClickListener {
-                override fun onClick(v: View?) {
-                    onCyclingClicked()
-                    Toast.makeText(this@MainActivity, "Cycling Anonymous 1", Toast.LENGTH_SHORT).show()
-                }
-            }
-        )
-        binding.btnRunning.setOnClickListener(
-            object : View.OnClickListener {
-                override fun onClick(v: View?) {
-                    onRunningClicked()
-                    Toast.makeText(this@MainActivity, "Running Anonymous 2", Toast.LENGTH_SHORT).show()
-                }
-            }
-        )
-
-
-
+        binding.btnCycling.setOnClickListener {
+            onCyclingClicked()
+            Toast.makeText(this@MainActivity, "Cycling Anonymous 1", Toast.LENGTH_SHORT).show()
+        }
+        binding.btnRunning.setOnClickListener {
+            onRunningClicked()
+            Toast.makeText(this@MainActivity, "Running Anonymous 2", Toast.LENGTH_SHORT).show()
+        }
 
 
     }
