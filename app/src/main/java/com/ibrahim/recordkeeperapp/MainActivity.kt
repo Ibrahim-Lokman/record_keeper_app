@@ -21,14 +21,14 @@ class MainActivity : AppCompatActivity(){
 //        }
 
         binding.btnCycling.setOnClickListener(
-            View.OnClickListener {
+            View.OnClickListener() {
 
                 onCyclingClicked()
                 Toast.makeText(this, "Cycling Anonymous 2", Toast.LENGTH_SHORT).show()
             }
         )
         binding.btnRunning.setOnClickListener(
-            View.OnClickListener {
+            View.OnClickListener() {
                 onRunningClicked()
                 Toast.makeText(this, "Running Anonymous 2", Toast.LENGTH_SHORT).show()
             }
