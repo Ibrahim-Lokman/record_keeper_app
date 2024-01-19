@@ -3,6 +3,7 @@ package com.ibrahim.recordkeeperapp
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.FrameLayout
+import androidx.fragment.app.commit
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.ibrahim.recordkeeperapp.databinding.ActivityMainBinding
 
@@ -13,7 +14,9 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-       binding.textViewExample.text = "Hello World Edited!"
+       supportFragmentManager.commit {
+           add(R.id.frame_content, RunningFragment())
+       }
 
     }
 }
