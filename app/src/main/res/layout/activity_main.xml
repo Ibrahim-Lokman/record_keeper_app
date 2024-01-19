@@ -17,27 +17,27 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
-    <Button
-        android:id="@+id/btn_running"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Running"
+<!--    <Button-->
+<!--        android:id="@+id/btn_running"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Running"-->
 
-        app:layout_constraintBottom_toTopOf="@id/bottom_nav"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_margin="12dp"
-        />
+<!--        app:layout_constraintBottom_toTopOf="@id/bottom_nav"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        android:layout_margin="12dp"-->
+<!--        />-->
 
-    <Button
-        android:id="@+id/btn_cycling"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Cycling"
-        app:layout_constraintBottom_toTopOf="@id/bottom_nav"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_margin="12dp"
+<!--    <Button-->
+<!--        android:id="@+id/btn_cycling"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Cycling"-->
+<!--        app:layout_constraintBottom_toTopOf="@id/bottom_nav"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        android:layout_margin="12dp"-->
 
-        />
+<!--        />-->
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_nav"
